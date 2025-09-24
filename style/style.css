@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #5B84A8; 
+    --dark-color: #000000; 
+    --gray-color: #DADDD8; 
+    --white: #ffffff; 
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 70px 0;
+}
+
+section .section-title {
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-orange {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.text-orange {
+    color: var(--primary-color);
+}
+
+.text-dark {
+    color: var(--dark-color)
+}
+
+.fs-7 {
+    font-size: var(--small-font-size);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+CSS PER SECTION 
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color: var(--primary-color)
+}
+
+.navbar .nav-item .nav-link:hover, 
+.navbar .nav-item .nav-link:active {
+    color: var(--primary-color)
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.nav-link:hover{
+    color: var(--primary-color);
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0,0,0,0.05);
+}
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary-color);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.header-section .header-img {
+    width: 90%;
+}
+
+.btn{
+    padding: 10px 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size :14px;
+    font-weight: 500px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.banner-container .banner{
+    flex: 1 1 40rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-container .banner img{
+    height: 100%;
+    width: 100%;
+    object-fit:COVER ;
+}
+
+.banner-container .banner .content {
+    position: absolute;
+    top: 50%; left: 4%;
+    transform: translateY(-50%);
+}
+
+.banner-container .banner .contennt h3{
+    font-size: 3rem;
+    color: white;
+}
+.banner-container .banner .contennt p{
+    font-size: 2rem;
+    color: white;
+}
+
+.banner-container .banner:hover img{
+    transform:scale(1.2) rotate(-5deg);
+}
+
+  /* Tablet */
+  @media (max-width: 758px, 350px) {
+    html {
+      font-size: 75%;
+    }
+  
+    .navbar .nav-item{
+      position: absolute;
+      top: 100%;
+      right: -1000%;
+      background-color: #2e1010cc;
+      width: 30rem;
+      height: 100vh;
+      transition: 0.3s;
+    }
+  
+    .navbar .navbar-item.active {
+      right: 0;
+    }
+  
+    .navbar .navbar-item a {
+      color: var(--bg);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+}
+
+.moodboard col .card-h100{
+    filter: drop-shadow(0px 15px 10px rgb(53, 53, 53));
+}
+
+.moodboard col .card-h100 :hover {
+    transform: scale(1.1);
+}
+
+
+.awal-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background : url(../image/awal.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.information-container p {
+    text-align: right;
+}
+
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/alabaster-co-2r13qYSJEK8-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-section {
+    color: #ffffff;
+}
+
+.page-section p {
+    color: #DADDD8;
+}
+
+.service-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/thought-catalog-UGkKSDjQKUQ-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pembuka-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-section {
+    transition: 0.6s;
+}
+
+.collection-img span {
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.header-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/kelly-sikkema-Dx1b5ucschA-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.penutup-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../image/kaitlyn-baker-vZJdYl5JVXY-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
